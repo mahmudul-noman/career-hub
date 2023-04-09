@@ -1,0 +1,13 @@
+.start-apply-btn {
+    background: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%);
+    border-radius: 8px;
+    border: none;
+    color: #FFf;
+    font-weight: 800;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+nav a{
+    margin-left: 20px;
+}
