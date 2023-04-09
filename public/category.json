@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "image": "https://cdn-icons-png.flaticon.com/512/888/888909.png?w=740&t=st=1681067990~exp=1681068590~hmac=4d0bcc4a4a62a5e79b1c6aeb75ac3af674f9cc11af4651ef6aeb4c991ea92fff",
+      "jobTitle": "Front-end Developer",
+      "availableJob": "2 Jobs Available"
+    },
+    {
+      "id": 2,
+      "image": "https://cdn-icons-png.flaticon.com/512/332/332106.png?w=740&t=st=1681068017~exp=1681068617~hmac=2205990682cc4b3d539dbe9ec9050866220831563309d02b0e1338512f7f5469",
+      "jobTitle": "Full-stack Developer",
+      "availableJob": "3 Jobs Available"
+    },
+    {
+      "id": 3,
+      "image": "https://cdn-icons-png.flaticon.com/512/1246/1246357.png?w=740&t=st=1681068041~exp=1681068641~hmac=3b1addcaeb01b0f71f0fc3e0d49ed3ed9ff28b5a68db41aa9da7fc4a17bf1453",
+      "jobTitle": "UX Designer",
+      "availableJob": "1 Jobs Available"
+    },
+    {
+      "id": 4,
+      "image": "https://cdn-icons-png.flaticon.com/512/136/136530.png?w=740&t=st=1681068092~exp=1681068692~hmac=01ddee768acf2de812f15428eee581834829ff6efc42c1632e17fb7c3b6d3789",
+      "jobTitle": "Software Engineer",
+      "availableJob": "4 Jobs Available"
+    }
+  ]

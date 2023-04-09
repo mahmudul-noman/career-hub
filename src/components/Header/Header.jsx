@@ -13,7 +13,7 @@ const Header = () => {
                     <Link to="/appliedjobs">Applied Jobs</Link>
                     <Link to="/blog">Blog</Link>
                 </nav>
-                <button className='btn btn-primary start-apply-btn'>Start Applying</button>
+                <button className='btn btn-primary cmn-btn-clr'>Start Applying</button>
             </div>
         </>
     );
