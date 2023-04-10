@@ -2,11 +2,15 @@ import React from 'react';
 import './Home.css';
 import { useLoaderData } from 'react-router-dom';
 import Categories from '../Categories/Categories';
+import Jobs from '../Jobs/Jobs';
+// import Jobs from '../Jobs/Jobs';
 
 const Home = () => {
     const categories = useLoaderData();
+    // const jobs = useLoaderData();
     return (
         <>
+            {/* Banner Area */}
             <div className="banner mt-10 mt-24 grid grid-cols-2 items-center justify-between">
                 <div className="banner-text text-start col-span-1">
                     <h2 className='text-7xl font-extrabold leading-7r'>One Step <br /> Closer To Your <br /> <span className='cmn-text-clr'>Dream Job</span></h2>
@@ -18,6 +22,8 @@ const Home = () => {
                 </div>
             </div>
 
+
+            {/* Categories Area */}
             <div className='categories-container mt-32'>
                 <h1 className='font-extrabold text-5xl text-gray-900 m-4'>Job Category List</h1>
                 <p className='text-base font-bold text-gray-500 m-5'>Explore thousands of job opportunities with all the information you need. Its your future</p>
@@ -30,6 +36,12 @@ const Home = () => {
                     }
                 </div>
             </div>
+
+
+            {/* Featured Jobs Area */}
+            {/* <Jobs></Jobs> */}
+
+
         </>
     );
 };
