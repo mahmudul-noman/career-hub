@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
 import Categories from '../Categories/Categories';
 import Jobs from '../Jobs/Jobs';
-// import Jobs from '../Jobs/Jobs';
 
 const Home = () => {
     const categories = useLoaderData();
     // const jobs = useLoaderData();
+
+    const dynamic = useParams();
+    // console.log(dynamic);
+
+    const [job, setJob] = useState([]);
+
+    useEffect(() => {
+        fetch('jobs.json')
+            .then(res => res.json())
+            .then(data => setJob(data))
+    }, [])
+
+
     return (
         <>
             {/* Banner Area */}
@@ -39,7 +51,14 @@ const Home = () => {
 
 
             {/* Featured Jobs Area */}
-            {/* <Jobs></Jobs> */}
+            <div className="featured-job mt-24 grid grid-cols-2 gap-5">
+                {
+                    job.map(myjob => <Jobs
+                        myjob={myjob}
+                        key={myjob.id}
+                    ></Jobs>)
+                }
+            </div>
 
 
         </>
