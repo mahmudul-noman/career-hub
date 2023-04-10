@@ -33,3 +33,13 @@ body {
 .job-details-span {
   @apply text-base font-bold text-gray-600;
 }
+
+.blog-single {
+  @apply shadow-xl rounded-md p-5 text-start;
+}
+.ques{
+  @apply text-rose-500 font-bold text-xl;
+}
+.ans{
+  @apply text-justify text-lg mt-2;
+}

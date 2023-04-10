@@ -19,7 +19,7 @@ const Jobs = ({ myjob }) => {
                 <button className='btn btn-outline btn-primary'>{fulltime_or_parttime}</button>
             </div>
             <div className="location-salary mt-4 flex gap-10 font-semibold text-xl text-gray-600">
-                <h4><FontAwesomeIcon icon={faLocationDot} /> {location}</h4>
+                <h4><FontAwesomeIcon className='me-2' icon={faLocationDot} /> {location}</h4>
                 <div className="salary flex items-center justify-center gap-2">
                     <CurrencyDollarIcon className="h-6 w-6 text-gray-500" />
                     <h4>Salary: {salary}</h4>

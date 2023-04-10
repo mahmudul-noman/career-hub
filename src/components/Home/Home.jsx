@@ -49,7 +49,7 @@ const Home = () => {
 
             {/* Featured Jobs Area */}
             <div className="featured-container  mt-24 ">
-            <h1 className='font-extrabold text-5xl text-gray-900 m-4'>Job Category List</h1>
+            <h1 className='font-extrabold text-5xl text-gray-900 m-4'>Featured Jobs</h1>
                 <p className='text-base font-bold text-gray-500 m-5'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 <div className="featured-job grid grid-cols-2 gap-5">
                     {
