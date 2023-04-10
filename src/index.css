@@ -15,7 +15,7 @@ body {
   color: #FFf;
   font-weight: 800;
   font-size: 16px;
-  text-transform: capitalize; 
+  text-transform: capitalize;
 }
 
 .cmn-text-clr {
@@ -24,4 +24,12 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+
+.job-details-heading {
+  @apply text-base font-black text-gray-800 mb-6;
+}
+
+.job-details-span {
+  @apply text-base font-bold text-gray-600;
 }

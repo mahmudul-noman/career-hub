@@ -14,8 +14,9 @@ import Appliedjobs from './components/Appliedjobs/Appliedjobs';
 import Blog from './components/Blog/Blog';
 import Error from './components/Error/Error';
 import Header from './components/Header/Header';
-// import JobDetails from './components/JobDetails/JobDetails';
+import JobDetails from './components/JobDetails/JobDetails';
 import Jobs from './components/Jobs/Jobs';
+import SingleJobDetails from './components/SingleJobDetails/SingleJobDetails';
 
 
 const router = createBrowserRouter([
@@ -26,8 +27,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('category.json'),
-        // loader: () => ('jobs.json')
+        loader: () => fetch('/category.json'),
       },
       {
         path: 'header',
@@ -45,14 +45,14 @@ const router = createBrowserRouter([
         path: 'jobs',
         element: <Jobs></Jobs>
       },
-
-
-
-
-      // {
-      //   path: 'jobDetails/:jobId',
-      //   element: <JobDetails></JobDetails>
-      // },
+      {
+        path: 'jobDetails/:id',
+        element: <JobDetails></JobDetails>
+      },
+      {
+        path: 'singlejobdetails',
+        element: <SingleJobDetails></SingleJobDetails>
+      },
       {
         path: 'blog',
         element: <Blog></Blog>

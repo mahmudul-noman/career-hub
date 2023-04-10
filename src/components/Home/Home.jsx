@@ -6,13 +6,10 @@ import Jobs from '../Jobs/Jobs';
 
 const Home = () => {
     const categories = useLoaderData();
-    // const jobs = useLoaderData();
 
-    const dynamic = useParams();
-    // console.log(dynamic);
-
+    // const { id } = useParams();
+    // Featured Jobs Area: useEffect
     const [job, setJob] = useState([]);
-
     useEffect(() => {
         fetch('jobs.json')
             .then(res => res.json())
@@ -36,7 +33,7 @@ const Home = () => {
 
 
             {/* Categories Area */}
-            <div className='categories-container mt-32'>
+            <div className='categories-container mt-24'>
                 <h1 className='font-extrabold text-5xl text-gray-900 m-4'>Job Category List</h1>
                 <p className='text-base font-bold text-gray-500 m-5'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 <div className="categories grid grid-cols-4 gap-5">
@@ -51,13 +48,17 @@ const Home = () => {
 
 
             {/* Featured Jobs Area */}
-            <div className="featured-job mt-24 grid grid-cols-2 gap-5">
-                {
-                    job.map(myjob => <Jobs
-                        myjob={myjob}
-                        key={myjob.id}
-                    ></Jobs>)
-                }
+            <div className="featured-container  mt-24 ">
+            <h1 className='font-extrabold text-5xl text-gray-900 m-4'>Job Category List</h1>
+                <p className='text-base font-bold text-gray-500 m-5'>Explore thousands of job opportunities with all the information you need. Its your future</p>
+                <div className="featured-job grid grid-cols-2 gap-5">
+                    {
+                        job.map(myjob => <Jobs
+                            myjob={myjob}
+                            key={myjob.id}
+                        ></Jobs>)
+                    }
+                </div> 
             </div>
 
 
