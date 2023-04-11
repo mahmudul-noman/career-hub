@@ -5,7 +5,7 @@
 
 body {
   font-family: 'Manrope', sans-serif;
-  max-width: 1450px;
+  /* max-width: 1450px; */
   margin: 0 auto;
 }
 
@@ -37,7 +37,7 @@ body {
 }
 
 .blog-single {
-  @apply shadow-xl rounded-md p-5 text-start;
+  @apply shadow-xl rounded-md p-5 text-start bg-sky-100;
 }
 
 .ques {

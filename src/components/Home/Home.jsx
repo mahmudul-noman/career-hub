@@ -7,7 +7,6 @@ import Jobs from '../Jobs/Jobs';
 const Home = () => {
     const categories = useLoaderData();
 
-    // const { id } = useParams();
     // Featured Jobs Area: useEffect
     const [job, setJob] = useState([]);
     useEffect(() => {
@@ -15,6 +14,13 @@ const Home = () => {
             .then(res => res.json())
             .then(data => setJob(data))
     }, [])
+
+
+    // Show All Button
+    const [showAll, setShowAll] = useState(false);
+    const handleShowAll = () => {
+        setShowAll(true);
+    }
 
 
     return (
@@ -49,19 +55,24 @@ const Home = () => {
 
             {/* Featured Jobs Area */}
             <div className="featured-container  mt-24 ">
-            <h1 className='font-extrabold text-5xl text-gray-900 m-4'>Featured Jobs</h1>
+                <h1 className='font-extrabold text-5xl text-gray-900 m-4'>Featured Jobs</h1>
                 <p className='text-base font-bold text-gray-500 m-5'>Explore thousands of job opportunities with all the information you need. Its your future</p>
                 <div className="featured-job grid grid-cols-2 gap-5">
                     {
-                        job.map(myjob => <Jobs
+                        job.slice(0, showAll ? 6 : 4).map(myjob => <Jobs
                             myjob={myjob}
                             key={myjob.id}
                         ></Jobs>)
                     }
-                </div> 
+                </div>
+
+                {!showAll && (
+                    <div className="show-all-btn my-5">
+                        <button onClick={() => handleShowAll()} className='btn btn-danger'>Show All</button>
+                    </div>
+                )
+                }
             </div>
-
-
         </>
     );
 };

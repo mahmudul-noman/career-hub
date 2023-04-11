@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { getStoredCart } from '../../utils/fakeDB';
 import AppliedJobDetails from '../AppliedJobDetails/AppliedJobDetails';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 const Appliedjobs = () => {
 
@@ -42,7 +44,8 @@ const Appliedjobs = () => {
         <>
             <h1 className='mt-20 font-extrabold text-3xl'>Applied Jobs</h1>
             <div className="dropdown dropdown-bottom flex justify-end mt-20 mb-3">
-                <label tabIndex={0} className="btn bg-gray-300 text-black hover:text-white border-0 m-1">Filter By</label>
+                <label tabIndex={0} className="btn bg-gray-300 text-black hover:text-white border-0 m-1">
+                    Filter By &nbsp;<FontAwesomeIcon icon={faAngleDown} /></label>
                 <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                     <button className={`mb-2 btn btn-outline btn-info ${filter === 'remote' ? 'active' : ''}`} onClick={() => handleFilter('remote')} >Remote</button>
 
