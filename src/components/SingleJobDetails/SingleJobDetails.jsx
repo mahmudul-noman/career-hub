@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDollarSign, faCalendarDays, faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons'
 
-const SingleJobDetails = ({ jb }) => {
+const SingleJobDetails = ({ jb, handleApplyNow }) => {
     const { job_description, job_responsibility, educational_requirements, experiences, phone, email, salary, job_title, location, company_logo } = jb;
     return (
         <div>
@@ -25,7 +25,7 @@ const SingleJobDetails = ({ jb }) => {
                         <h3 className='job-details-heading'><FontAwesomeIcon className='text-blue-500 mr-2' icon={faEnvelope} /> Email: <span className='job-details-span'>{email}</span></h3>
                         <h3 className='job-details-heading'><FontAwesomeIcon className='text-blue-500 mr-2' icon={faLocationDot} /> Address: <span className='job-details-span'>{location}</span></h3>
                     </div>
-                    <button className='btn btn-primary w-full mt-5 cmn-btn-clr'>Apply Now</button>
+                    <button onClick={() => handleApplyNow(jb.id)} className='btn btn-primary w-full mt-5 cmn-btn-clr'>Apply Now</button>
                 </div>
             </div>
         </div>

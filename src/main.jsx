@@ -17,6 +17,8 @@ import Header from './components/Header/Header';
 import JobDetails from './components/JobDetails/JobDetails';
 import Jobs from './components/Jobs/Jobs';
 import SingleJobDetails from './components/SingleJobDetails/SingleJobDetails';
+import AppliedJobDetails from './components/AppliedJobDetails/AppliedJobDetails';
+// import Footer from './components/Footer/Footer';
 
 
 const router = createBrowserRouter([
@@ -54,9 +56,17 @@ const router = createBrowserRouter([
         element: <SingleJobDetails></SingleJobDetails>
       },
       {
+        path: 'appliedjobdetails',
+        element: <AppliedJobDetails></AppliedJobDetails>
+      },
+      {
         path: 'blog',
         element: <Blog></Blog>
       },
+      // {
+      //   path: 'footer',
+      //   element: <Footer></Footer>
+      // },
       {
         path: '*',
         element: <Error></Error>
