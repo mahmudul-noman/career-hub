@@ -4,11 +4,17 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { CurrencyDollarIcon } from '@heroicons/react/24/solid';
 import { Link } from 'react-router-dom';
 
-const AppliedJobDetails = ({ appliedJob }) => {
+const AppliedJobDetails = ({ appliedJob, filter }) => {
     const { id, company_logo, job_title, company_name, remote_or_onsite, fulltime_or_parttime, location, salary } = appliedJob;
+
+    if (filter && remote_or_onsite.toLowerCase() !== filter) {
+        return null;
+    }
     return (
+
+
         <>
-            <div className="applied-container flex justify-between items-center gap-4 shadow-sm rounded-md border-2 border-gray-300 p-12 mb-6 m-auto" style={{ width: '1200px' }}>
+            <div className="applied-container flex justify-between items-center gap-4 shadow-sm rounded-md border-2 border-gray-300 p-12 mb-6 m-auto">
                 <div className="applied-company-img company-logo">
                     <img src={company_logo} alt="" />
                 </div>

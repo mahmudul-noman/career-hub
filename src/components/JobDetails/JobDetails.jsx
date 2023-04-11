@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import SingleJobDetails from '../SingleJobDetails/SingleJobDetails';
 import { addToDb } from '../../utils/fakeDB';
+import toast, { Toaster } from 'react-hot-toast';
 
 const JobDetails = () => {
 
@@ -12,16 +13,16 @@ const JobDetails = () => {
             .then(res => res.json())
             .then(job => {
                 const selectedJob = job.find(j => j.id.toString() === id);
-                // console.log(selectedJob);
                 setJobs([selectedJob]);
             })
     }, [id]);
 
 
     const handleApplyNow = id => {
-        // console.log(id);
         addToDb(id);
+        toast.success(`You're Successfully Apply This Job!`);
     }
+
 
     return (
         <div>

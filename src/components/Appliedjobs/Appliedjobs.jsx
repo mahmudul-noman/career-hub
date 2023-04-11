@@ -4,15 +4,16 @@ import AppliedJobDetails from '../AppliedJobDetails/AppliedJobDetails';
 
 const Appliedjobs = () => {
 
+    // Fetch Data
     const [myJob, setMyJob] = useState([]);
-    const [foundMyJob, setFoundMyJob] = useState([]);
-
     useEffect(() => {
         fetch('/jobs.json')
             .then(res => res.json())
             .then(data => setMyJob(data))
     }, [])
 
+    // Applied Job
+    const [foundMyJob, setFoundMyJob] = useState([]);
     useEffect(() => {
         const savedJob = getStoredCart();
         let newArr = [];
@@ -26,19 +27,36 @@ const Appliedjobs = () => {
         setFoundMyJob(newArr);
     }, [myJob])
 
+
+    // Job Filter 
+    const [filter, setFilter] = useState('');
+    const handleFilter = (types) => {
+        setFilter(types);
+    };
+
+    const filteredJobs = filter
+        ? foundMyJob.filter((job) => job.remote_or_onsite.toLowerCase() === filter)
+        : foundMyJob;
+
     return (
-        <div>
-            {/* <h1>Applied jobs</h1> */}
-            <div className="applied-container mt-24">
-                <h1 className='my-20 font-extrabold text-3xl text-sky-600'>Applied Jobs</h1>
-                {
-                    foundMyJob.map(appliedJob => <AppliedJobDetails
-                        key={appliedJob.id}
-                        appliedJob={appliedJob}
-                    ></AppliedJobDetails>)
-                }
+        <>
+            <h1 className='mt-20 font-extrabold text-3xl'>Applied Jobs</h1>
+            <div className="dropdown dropdown-bottom flex justify-end mt-20 mb-3">
+                <label tabIndex={0} className="btn bg-gray-300 text-black hover:text-white border-0 m-1">Filter By</label>
+                <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                    <button className={`mb-2 btn btn-outline btn-info ${filter === 'remote' ? 'active' : ''}`} onClick={() => handleFilter('remote')} >Remote</button>
+
+                    <button className={`btn btn-outline btn-accent ${filter === 'onsite' ? 'active' : ''}`} onClick={() => handleFilter('onsite')} >Onsite</button>
+                </ul>
             </div>
-        </div>
+
+            {/* Map Data */}
+            {
+                filteredJobs.map((job) => (
+                    <AppliedJobDetails key={job.id} appliedJob={job} filter={filter} />
+                ))
+            }
+        </>
     );
 };
 

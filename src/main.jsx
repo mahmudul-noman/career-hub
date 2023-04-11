@@ -18,6 +18,7 @@ import JobDetails from './components/JobDetails/JobDetails';
 import Jobs from './components/Jobs/Jobs';
 import SingleJobDetails from './components/SingleJobDetails/SingleJobDetails';
 import AppliedJobDetails from './components/AppliedJobDetails/AppliedJobDetails';
+import ActiveLink from './components/ActiveLink/ActiveLink';
 // import Footer from './components/Footer/Footer';
 
 
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path: 'appliedjobdetails',
         element: <AppliedJobDetails></AppliedJobDetails>
+      },
+      {
+        path: 'activelink',
+        element: <ActiveLink></ActiveLink>
       },
       {
         path: 'blog',
