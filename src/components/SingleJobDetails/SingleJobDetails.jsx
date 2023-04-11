@@ -6,8 +6,8 @@ const SingleJobDetails = ({ jb, handleApplyNow }) => {
     const { job_description, job_responsibility, educational_requirements, experiences, phone, email, salary, job_title, location, company_logo } = jb;
     return (
         <div>
-            <h1 className='mt-20 font-extrabold text-3xl'>Job Details</h1>
-            <div className="job-details-container mt-20 grid grid-cols-2 gap-4 place-items-center">
+            <h1 className='bg-gray py-20 font-extrabold text-3xl'>Job Details</h1>
+            <div className="cmn-width job-details-container py-20 grid grid-cols-2 gap-4 place-items-center">
                 <div className="job-details-left text-start">
                     <img className='company-logo mb-5' src={company_logo} alt="" />
                     <h3 className='job-details-heading'>Job Description: <span className='job-details-span'>{job_description}</span></h3>

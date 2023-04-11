@@ -19,13 +19,14 @@ import Jobs from './components/Jobs/Jobs';
 import SingleJobDetails from './components/SingleJobDetails/SingleJobDetails';
 import AppliedJobDetails from './components/AppliedJobDetails/AppliedJobDetails';
 import ActiveLink from './components/ActiveLink/ActiveLink';
-// import Footer from './components/Footer/Footer';
+import Footer from './components/Footer/Footer';
 
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Main></Main>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: '/',
@@ -68,13 +69,9 @@ const router = createBrowserRouter([
         path: 'blog',
         element: <Blog></Blog>
       },
-      // {
-      //   path: 'footer',
-      //   element: <Footer></Footer>
-      // },
       {
-        path: '*',
-        element: <Error></Error>
+        path: 'footer',
+        element: <Footer></Footer>
       }
     ]
   }

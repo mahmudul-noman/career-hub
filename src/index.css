@@ -37,7 +37,7 @@ body {
 }
 
 .blog-single {
-  @apply shadow-xl rounded-md p-5 text-start bg-sky-100;
+  @apply shadow-xl rounded-md p-5 text-start bg-gray-100 border-2 border-gray-200;
 }
 
 .ques {
@@ -46,4 +46,20 @@ body {
 
 .ans {
   @apply text-justify text-lg mt-2;
+}
+
+.bg-gray {
+  background: linear-gradient(90deg, rgba(126, 144, 254, 0.06) 0%, rgba(152, 115, 255, 0.05) 100%);
+}
+
+.cmn-width {
+  @apply max-w-screen-xl mx-auto;
+}
+
+.footer-header-cmn{
+  @apply font-extrabold text-xl pb-4;
+}
+
+.footer-link-cmn {
+  @apply font-normal text-base pb-4 text-white text-opacity-70 cursor-pointer;
 }

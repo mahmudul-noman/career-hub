@@ -46,9 +46,8 @@ const Statistics = () => {
     ];
 
     return (
-        <div className='mt-14'>
-            <h1 className='font-extrabold text-3xl text-sky-700'>Assignments Marks</h1>
-            <h4 className='text-rose-400 font-bold'>Avg. Marks: 59.38</h4>
+        <div className=''>
+            <h1 className='py-20 bg-gray font-extrabold text-3xl'>Assignments Marks</h1>
             <div className='mt-12 flex justify-center'>
                 <AreaChart
                     width={1250}

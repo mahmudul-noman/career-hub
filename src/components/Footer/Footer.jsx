@@ -1,19 +1,46 @@
-// import React from 'react';
+import React from 'react';
 
-// const Footer = () => {
-//     return (
-//         <div className='bg-black w-full my-footer'>
-//             <div className="footer-container mt-20 grid grid-cols-5 text-start">
-//                 <div className="footer-one">
-//                     <h2 className="logo font-extrabold text-2xl text-white">_Job<span className='text-yellow-600'>Station</span><sup className='text-sky-600 font-extrabold'>7</sup></h2>
-//                 </div>
-//                 <div className="footer-two">Two</div>
-//                 <div className="footer-three">Three</div>
-//                 <div className="footer-four">Four</div>
-//                 <div className="footer-five">Five</div>
-//             </div>
-//         </div>
-//     );
-// };
 
-// export default Footer;
+const Footer = () => {
+    return (
+        <div className='bg-black text-white w-full my-footer'>
+            <div className="footer-container grid grid-cols-5 text-start cmn-width py-24" style={{ gridGap: '20px' }}>
+                <div className="footer-one">
+                    <h2 className="pb-4 logo font-extrabold text-2xl text-white">Job<span className='text-yellow-600'>Station</span><sup className='text-white font-extrabold'>7</sup></h2>
+                    <p className='footer-link-cmn'>There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
+                    <ul className='flex gap-4'>
+                        
+                    </ul>
+                </div>
+                <div className="footer-two">
+                    <h2 className='footer-header-cmn'>Company</h2>
+                    <p className='footer-link-cmn'>About Us</p>
+                    <p className='footer-link-cmn'>Work</p>
+                    <p className='footer-link-cmn'>Latest news</p>
+                    <p className='footer-link-cmn'>Career</p>
+                </div>
+                <div className="footer-three">
+                    <h2 className='footer-header-cmn'>Product</h2>
+                    <p className='footer-link-cmn'>Prototype</p>
+                    <p className='footer-link-cmn'>Plans & Pricing</p>
+                    <p className='footer-link-cmn'>Customers</p>
+                    <p className='footer-link-cmn'>Integrations</p>
+                </div>
+                <div className="footer-four">
+                    <h2 className='footer-header-cmn'>Support</h2>
+                    <p className='footer-link-cmn'>Help Desk</p>
+                    <p className='footer-link-cmn'>Sales</p>
+                    <p className='footer-link-cmn'>Become a Partner</p>
+                    <p className='footer-link-cmn'>Developers</p>
+                </div>
+                <div className="footer-five">
+                    <h2 className='footer-header-cmn'>Contact</h2>
+                    <p className='footer-link-cmn'>524 Broadway , NYC</p>
+                    <p className='footer-link-cmn'>+1 777 - 978 - 5570</p>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Footer;

@@ -6,8 +6,8 @@ const Blog = () => {
 
     return (
         <>
-            <h1 className='font-extrabold text-4xl text-sky-600 mt-20'>Blog <FontAwesomeIcon icon={faBookOpenReader} /></h1>
-            <div className='blog-container grid grid-cols-2 gap-4 mt-20'>
+            <h1 className='bg-gray font-extrabold text-4xl text-sky-600 py-20'>Blog <FontAwesomeIcon icon={faBookOpenReader} /></h1>
+            <div className='cmn-width blog-container grid grid-cols-2 gap-4 my-20'>
                 <div className="blog-one blog-single">
                     <h4 className="ques">When should you use context API?</h4>
                     <p className="ans">The React Context API should be used when you have data or state that needs to be shared between components that are not directly connected in the component tree, or when you want to avoid prop drilling. It's particularly useful for managing global state, theming, localization, and other scenarios where you need to pass data down to multiple components. However, it's important to use the Context API judiciously, as overusing it can lead to a complex and hard-to-maintain codebase. Therefore, it's crucial to balance the benefits of using the Context API with the need for simplicity and clarity in your code.</p>

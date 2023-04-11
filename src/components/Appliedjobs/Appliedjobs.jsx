@@ -42,8 +42,8 @@ const Appliedjobs = () => {
 
     return (
         <>
-            <h1 className='mt-20 font-extrabold text-3xl'>Applied Jobs</h1>
-            <div className="dropdown dropdown-bottom flex justify-end mt-20 mb-3">
+            <h1 className='py-24 font-extrabold text-3xl bg-gray'>Applied Jobs</h1>
+            <div className="dropdown dropdown-bottom flex justify-end mt-20 mb-3 cmn-width">
                 <label tabIndex={0} className="btn bg-gray-300 text-black hover:text-white border-0 m-1">
                     Filter By &nbsp;<FontAwesomeIcon icon={faAngleDown} /></label>
                 <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
@@ -54,11 +54,13 @@ const Appliedjobs = () => {
             </div>
 
             {/* Map Data */}
-            {
-                filteredJobs.map((job) => (
-                    <AppliedJobDetails key={job.id} appliedJob={job} filter={filter} />
-                ))
-            }
+            <div className='cmn-width'>
+                {
+                    filteredJobs.map((job) => (
+                        <AppliedJobDetails key={job.id} appliedJob={job} filter={filter} />
+                    ))
+                }
+            </div>
         </>
     );
 };
