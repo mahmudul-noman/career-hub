@@ -1,8 +1,7 @@
-// use local storage to manage cart data
+// use local storage to manage job data
 const addToDb = id => {
     let shoppingCart = {}
 
-    //get the shopping cart from local storage
     const storedCart = localStorage.getItem('applied-job')
     if (storedCart) {
         shoppingCart = JSON.parse(storedCart)
@@ -22,13 +21,12 @@ const addToDb = id => {
 const getStoredCart = () => {
     let shoppingCart = {}
 
-    //get the shopping cart from local storage
+    //get the job data from local storage
     const storedCart = localStorage.getItem('applied-job')
     if (storedCart) {
         shoppingCart = JSON.parse(storedCart)
     }
     return shoppingCart
 }
-
 
 export { addToDb, getStoredCart }

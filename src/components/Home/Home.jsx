@@ -26,14 +26,14 @@ const Home = () => {
         <>
             {/* Banner Area */}
             <div className='bg-gray pt-20'>
-                <div className="banner grid grid-cols-2 items-center justify-between cmn-width">
-                    <div className="banner-text text-start col-span-1">
-                        <h2 className='text-7xl font-extrabold leading-7r' style={{lineHeight: '80px'}}>One Step <br /> Closer To Your <br /> <span className='cmn-text-clr'>Dream Job</span></h2>
+                <div className="banner grid grid-cols-1 lg:grid-cols-2 items-center justify-between cmn-width">
+                    <div className="banner-text px-2 lg:px-0 py-2 lg:py-0 text-center lg:text-start col-span-1">
+                        <h2 className='text-5xl lg:text-7xl font-extrabold' lg:style={{lineHeight: '80px'}}>One Step <br /> Closer To Your <br /> <span className='cmn-text-clr'>Dream Job</span></h2>
                         <p className='mt-10 text-lg'>Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.</p>
                         <button className='btn btn-primary cmn-btn-clr mt-10'>Get Started</button>
                     </div>
                     <div className="banner-img col-span-1 flex justify-self-end">
-                        <img src="man.png" alt="" />
+                        <img className='hidden lg:block' src="man.png" alt="" />
                     </div>
                 </div>
             </div>
@@ -41,9 +41,9 @@ const Home = () => {
 
             {/* Categories Area */}
             <div className='categories-container mt-24 cmn-width'>
-                <h1 className='font-extrabold text-5xl text-gray-900 m-4'>Job Category List</h1>
+                <h1 className='font-extrabold text-2xl lg:text-5xl text-gray-900 m-4'>Job Category List</h1>
                 <p className='text-base font-bold text-gray-500 m-5'>Explore thousands of job opportunities with all the information you need. Its your future</p>
-                <div className="categories grid grid-cols-4 gap-5">
+                <div className="categories grid grid-cols-1 lg:grid-cols-4 gap-5 px-5 lg:px-0">
                     {
                         categories.map(category => <Categories
                             key={category.id}
@@ -56,9 +56,9 @@ const Home = () => {
 
             {/* Featured Jobs Area */}
             <div className="featured-container mt-24 pb-10 cmn-width">
-                <h1 className='font-extrabold text-5xl text-gray-900 m-4'>Featured Jobs</h1>
+                <h1 className='font-extrabold text-2xl lg:text-5xl text-gray-900 m-4'>Featured Jobs</h1>
                 <p className='text-base font-bold text-gray-500 m-5'>Explore thousands of job opportunities with all the information you need. Its your future</p>
-                <div className="featured-job grid grid-cols-2 gap-5">
+                <div className="featured-job grid grid-cols-1 lg:grid-cols-2 gap-5 px-2 lg:px-0">
                     {
                         job.slice(0, showAll ? 6 : 4).map(myjob => <Jobs
                             myjob={myjob}

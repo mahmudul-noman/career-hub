@@ -6,7 +6,7 @@ const Blog = () => {
 
     return (
         <>
-            <h1 className='bg-gray font-extrabold text-4xl text-sky-600 py-20'>Blog <FontAwesomeIcon icon={faBookOpenReader} /></h1>
+            <h1 className='bg-gray font-extrabold text-4xl py-20'>Blog <FontAwesomeIcon icon={faBookOpenReader} /></h1>
             <div className='cmn-width blog-container grid grid-cols-2 gap-4 my-20'>
                 <div className="blog-one blog-single">
                     <h4 className="ques">When should you use context API?</h4>
