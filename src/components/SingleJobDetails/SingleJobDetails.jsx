@@ -4,6 +4,8 @@ import { faDollarSign, faCalendarDays, faPhone, faEnvelope, faLocationDot, faCir
 
 const SingleJobDetails = ({ jb, handleApplyNow }) => {
     const { job_description, job_responsibility, educational_requirements, experiences, phone, email, salary, job_title, location, company_logo } = jb;
+
+
     return (
         <div>
             <h1 className='bg-gray py-20 font-extrabold text-3xl'><FontAwesomeIcon icon={faCircleInfo} /> &nbsp; Job Details</h1>

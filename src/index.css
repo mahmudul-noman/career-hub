@@ -66,3 +66,12 @@ body {
 .footer-link-cmn {
   @apply font-normal text-base pb-4 text-white text-opacity-70 cursor-pointer;
 }
+
+.social-img-cmn{
+  @apply bg-white p-3 rounded-full cursor-pointer;
+} 
+.social-img {
+  height: 42px;
+  width: 42px;
+  object-fit: contain;
+}

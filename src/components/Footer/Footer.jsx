@@ -10,7 +10,11 @@ const Footer = () => {
                         <div className="footer-one">
                             <h2 className="pb-4 logo font-extrabold text-2xl text-white">Job<span className='text-yellow-600'>Station</span><sup className='text-white font-extrabold'>7</sup></h2>
                             <p className='footer-link-cmn'>There are many variations of passages of Lorem Ipsum , but the majority have suffered alteration in some form.</p>
-                            <ul className='flex gap-4'></ul>
+                            <div className="social flex gap-2">
+                                <img className='social-img social-img-cmn' src="fb.png" alt="" />
+                                <img className='social-img social-img-cmn' src="twit.png" alt="" />
+                                <img className='social-img social-img-cmn' src="insta.png" alt="" />
+                            </div>
                         </div>
                         <div className="footer-two">
                             <h2 className='footer-header-cmn'>Company</h2>
