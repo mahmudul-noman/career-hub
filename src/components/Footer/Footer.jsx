@@ -35,8 +35,8 @@ const Footer = () => {
                         </div>
                         <div className="footer-five">
                             <h2 className='footer-header-cmn'>Contact</h2>
-                            <p className='footer-link-cmn'>524 Broadway , NYC</p>
-                            <p className='footer-link-cmn'>+1 777 - 978 - 5570</p>
+                            <p className='footer-link-cmn'>Bangladesh, DHK</p>
+                            <p className='footer-link-cmn'>+880 16263-82361</p>
                         </div>
                     </div>
 

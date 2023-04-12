@@ -9,6 +9,9 @@ body {
   margin: 0 auto;
 }
 
+.hibg {
+  background: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%);
+}
 
 .cmn-btn-clr {
   background: linear-gradient(90deg, #7E90FE 0%, #9873FF 100%);
@@ -56,7 +59,7 @@ body {
   @apply max-w-screen-xl mx-auto;
 }
 
-.footer-header-cmn{
+.footer-header-cmn {
   @apply font-extrabold text-xl pb-4;
 }
 

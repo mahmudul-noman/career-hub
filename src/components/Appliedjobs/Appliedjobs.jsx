@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getStoredCart } from '../../utils/fakeDB';
 import AppliedJobDetails from '../AppliedJobDetails/AppliedJobDetails';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faListCheck } from '@fortawesome/free-solid-svg-icons'
 
 const Appliedjobs = () => {
 
@@ -42,11 +42,11 @@ const Appliedjobs = () => {
 
     return (
         <>
-            <h1 className='py-24 font-extrabold text-3xl bg-gray'>Applied Jobs</h1>
+            <h1 className='py-24 font-extrabold text-3xl bg-gray'><FontAwesomeIcon icon={faListCheck} /> &nbsp; Applied Jobs</h1>
             <div className="dropdown dropdown-bottom flex justify-end mt-20 mb-3 cmn-width">
                 <label tabIndex={0} className="btn bg-gray-300 text-black hover:text-white border-0 m-1">
                     Filter By &nbsp;<FontAwesomeIcon icon={faAngleDown} /></label>
-                <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                <ul tabIndex={0} className="dropdown-content menu p-2 shadow-xl bg-gray-200 rounded-box w-52">
                     <button className={`mb-2 btn btn-outline btn-info ${filter === 'remote' ? 'active' : ''}`} onClick={() => handleFilter('remote')} >Remote</button>
 
                     <button className={`btn btn-outline btn-accent ${filter === 'onsite' ? 'active' : ''}`} onClick={() => handleFilter('onsite')} >Onsite</button>
@@ -54,7 +54,7 @@ const Appliedjobs = () => {
             </div>
 
             {/* Map Data */}
-            <div className='cmn-width'>
+            <div className='cmn-width px-2 lg:px-0'>
                 {
                     filteredJobs.map((job) => (
                         <AppliedJobDetails key={job.id} appliedJob={job} filter={filter} />

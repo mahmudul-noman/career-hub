@@ -14,7 +14,7 @@ const AppliedJobDetails = ({ appliedJob, filter }) => {
 
 
         <>
-            <div className="applied-container flex justify-between items-center gap-4 shadow-sm rounded-md border-2 border-gray-300 p-12 mb-6 m-auto">
+            <div className="applied-container block lg:flex justify-between items-center gap-4 shadow-sm rounded-md border-2 border-gray-300 p-12 mb-6 m-auto">
                 <div className="applied-company-img company-logo">
                     <img src={company_logo} alt="" />
                 </div>
